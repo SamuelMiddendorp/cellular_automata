@@ -66,5 +66,5 @@ while(True):
         # world.spawn_particle(5,0,2)
     world.take_step()
     display.fill((0,0,0))
-    world.draw((235,167,83))
+    world.draw((20,0,255))
     pygame.display.flip()
