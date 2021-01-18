@@ -86,32 +86,16 @@ class CellEngine():
                         self.world[y+1][x+1].has_updated = True
                         self.world[y][x].type = 0
                         self.world[y][x].has_updated = True
-                    elif(self.world[x][y].inertia_left):
-                        if(self.get_cell(x-1,y) == 0):
-                            self.world[y][x-1].type = 2
-                            self.world[y][x-1].has_updated = True
-                            self.world[y][x].type = 0
-                            self.world[y][x-1].inertia_left = True
-                            self.world[y][x].has_updated = True
-                        elif(self.get_cell(x+1,y) == 0):
-                            self.world[y][x+1].type = 2
-                            self.world[y][x+1].has_updated = True
-                            self.world[y][x+1].inertia_left = False
-                            self.world[y][x].type = 0
-                            self.world[y][x].has_updated = True
-                    elif(not self.world[x][y].inertia_left):
-                        if(self.get_cell(x+1,y) == 0):
-                            self.world[y][x+1].type = 2
-                            self.world[y][x+1].has_updated = True
-                            self.world[y][x+1].inertia_left = False
-                            self.world[y][x].type = 0
-                            self.world[y][x].has_updated = True
-                        elif(self.get_cell(x-1,y) == 0):
-                            self.world[y][x-1].type = 2
-                            self.world[y][x-1].has_updated = True
-                            self.world[y][x].type = 0
-                            self.world[y][x-1].inertia_left = True
-                            self.world[y][x].has_updated = True
+                    elif(self.get_cell(x+1,y) == 0):
+                        self.world[y][x+1].type = 2
+                        self.world[y][x+1].has_updated = True
+                        self.world[y][x].type = 0
+                        self.world[y][x].has_updated = True
+                    elif(self.get_cell(x-1,y) == 0):
+                        self.world[y][x-1].type = 2
+                        self.world[y][x-1].has_updated = True
+                        self.world[y][x].type = 0
+                        self.world[y][x].has_updated = True
 
 
 
